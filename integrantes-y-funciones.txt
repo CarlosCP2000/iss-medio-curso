@@ -1,0 +1,7 @@
+Cárdenas Paredes, Carlos
+- Creación de los servicios base
+- Creación de Grupo de Recursos, ACR y Cluster
+
+Trinidad Evaristo, Ader
+- Pruebas iniciales en Docker Desktop
+- Comunicación interna entre servicios

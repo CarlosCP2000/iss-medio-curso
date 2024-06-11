@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usuario-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: usuario-api
+  template:
+    metadata:
+      labels:
+        app: usuario-api
+    spec:
+      containers:
+        - name: usuario-api
+          image: issmcacr.azurecr.io/usuario-api:latest
+          ports:
+            - containerPort: 8081
+      imagePullSecrets:
+        - name: acr-secret

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comedor-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: comedor-api
+  template:
+    metadata:
+      labels:
+        app: comedor-api
+    spec:
+      containers:
+        - name: comedor-api
+          image: issmcacr.azurecr.io/comedor-api:latest
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: acr-secret
