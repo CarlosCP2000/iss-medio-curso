@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: usuario-api
-          image: "058264457642.dkr.ecr.us-east-1.amazonaws.com/medio-curso:usuario-api"
+          image: "058264457642.dkr.ecr.us-east-1.amazonaws.com/medio-curso:usuario"
           ports:
             - containerPort: 8081

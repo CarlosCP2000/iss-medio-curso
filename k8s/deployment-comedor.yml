@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: comedor-api
-          image: "058264457642.dkr.ecr.us-east-1.amazonaws.com/medio-curso:comedor-api"
+          image: "058264457642.dkr.ecr.us-east-1.amazonaws.com/medio-curso:comedor"
           ports:
             - containerPort: 8080
       
