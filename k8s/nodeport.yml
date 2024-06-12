@@ -1,0 +1,76 @@
+# Service and Deployment for person-api
+apiVersion: v1
+kind: Service
+metadata:
+  name: usuario-api-service
+spec:
+  type: NodePort
+  selector:
+    app: usuario-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 30072
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usuario-api-deployment
+  labels:
+    app: usuario-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: usuario-api
+  template:
+    metadata:
+      labels:
+        app: usuario-api
+    spec:
+      containers:
+        - name: usuario-api-container
+          image: "058264457642.dkr.ecr.us-east-1.amazonaws.com/prestamos:person-api"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+
+# Service and Deployment for company-api
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: comedor-api-service
+spec:
+  type: NodePort
+  selector:
+    app: comedor-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 30073
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comedor-api-deployment
+  labels:
+    app: company-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: comedor-api
+  template:
+    metadata:
+      labels:
+        app: comedor-api
+    spec:
+      containers:
+        - name: comedor-api-container
+          image: "058264457642.dkr.ecr.us-east-1.amazonaws.com/prestamos:company-api"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

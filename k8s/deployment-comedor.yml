@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: comedor-api
-          image: issmcacr.azurecr.io/comedor-api:latest
+          image: "058264457642.dkr.ecr.us-east-1.amazonaws.com/medio-curso:comedor-api"
           ports:
             - containerPort: 8080
       imagePullSecrets:
