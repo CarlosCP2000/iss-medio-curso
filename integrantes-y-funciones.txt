@@ -1,7 +1,14 @@
 Cárdenas Paredes, Carlos
 - Creación de los servicios base
-- Creación de Grupo de Recursos, ACR y Cluster
+- Creación de Grupo de Recursos, ACR en AZURE
+- Subida de imágenes
+- ... problemas con la suscripción, no se pudo crear más clusters por falta de recursos (a pesar de eliminar los ya creados)
 
 Trinidad Evaristo, Ader
-- Pruebas iniciales en Docker Desktop
-- Comunicación interna entre servicios
+- Creación de cluster en EKS
+- Configuración de deployment y services YML
+- subida de servicios al cluster
+- ... problemas con la comunicación interna de los servicios (solo funciona con las ip externas)
+
+Estas fueron las IP privada con la que intentamos:
+http://172.31.6.14:8081/usuario
