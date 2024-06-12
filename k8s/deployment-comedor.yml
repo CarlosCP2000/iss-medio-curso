@@ -17,5 +17,4 @@ spec:
           image: "058264457642.dkr.ecr.us-east-1.amazonaws.com/medio-curso:comedor-api"
           ports:
             - containerPort: 8080
-      imagePullSecrets:
-        - name: acr-secret
+      

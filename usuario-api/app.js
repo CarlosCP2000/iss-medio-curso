@@ -8,7 +8,7 @@ app.use(express.json())
 const port = 8081
 const {usuarioModel} = require('./models');
 app.get('/', (req, res) => {
-    res.send("I am alive Usuario");
+    res.send("I am alive User");
 })
 
 app.get('/usuario', async (req, res) => {
