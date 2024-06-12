@@ -9,7 +9,7 @@ app.use(express.json())
 const port = 8080
 const {comedorModel} = require('./models');
 app.get('/', (req, res) => {
-    res.send("I am alive Comedor");
+    res.send("I am alive 22:49");
 })
 
 app.get('/comedor', async (req, res) => {
